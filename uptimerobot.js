@@ -27,7 +27,7 @@ Module.register("uptimerobot", {
 
         //Flag for check if module is loaded
         this.loaded = false;
-        if(this.config.api_key !== undefined) {
+        if (this.config.api_key !== undefined) {
             // Schedule update timer.
             this.getData();
             setInterval(function () {
@@ -45,57 +45,42 @@ Module.register("uptimerobot", {
         this.sendSocketNotification("uptimerobot-getData", this.config);
     },
 
+    setStatus: function (statusObject, statusForTranslate, statusClass, status) {
+        if (!this.config.useIcons) {
+            statusObject.innerHTML = this.translate(statusForTranslate);
+        } else {
+            statusObject.className = statusClass;
+        }
+        statusObject.className += " " + status;
+        if (this.config.useColors) {
+            status.className += " colored";
+        }
+    },
+
     getStatusTest: function (statusValue) {
         var status = document.createElement('td');
         switch (statusValue) {
             case 0:
-                if (!this.config.useIcons) {
-                    status.innerHTML = this.translate("PAUSED");
-                } else {
-                    status.className = "fa fa-pause-circle-o ";
-                }
-                status.className += "paused";
+                this.setStatus(status, "PAUSED", "fa fa-pause-circle-o", "paused")
                 break;
             case 1:
-                if (!this.config.useIcons) {
-                    status.innerHTML = this.translate("NOTCHECKEDYET");
-                } else {
-                    status.className = "fa fa-retweet ";
-                }
-                status.className += "not-checked-yet";
+                this.setStatus(status, "NOTCHECKEDYET", "fa fa-retweet", "not-checked-yet");
                 break;
             case 2:
-                if (!this.config.useIcons) {
-                    status.innerHTML = this.translate("ONLINE");
-                } else {
-                    status.className = "fa fa-arrow-circle-up ";
-                }
-                status.className += "online";
+                this.setStatus(status, "ONLINE", "fa fa-arrow-circle-up", "online");
                 break;
             case 8:
-                if (!this.config.useIcons) {
-                    status.innerHTML = this.translate("SEEMSDOWN");
-                } else {
-                    status.className = "fa fa-chevron-circle-down ";
-                }
-                status.className += "seems-down";
+                this.setStatus(status, "SEEMSDOWN", "fa fa-chevron-circle-down", "seems-down");
                 break;
             case 9:
-                if (!this.config.useIcons) {
-                    status.innerHTML = this.translate("DOWN");
-                } else {
-                    status.className = "fa fa-arrow-circle-down ";
-                }
-                status.className += "offline";
+                this.setStatus(status, "DOWN", "fa fa-arrow-circle-down", "offline");
                 break;
             default:
                 return "";
         }
-        if (this.config.useColors) {
-            status.className += " colored";
-        }
         return status;
     },
+
 
     getDom: function () {
         var self = this;
@@ -122,14 +107,24 @@ Module.register("uptimerobot", {
                 innerTable.appendChild(tableLine);
             });
             wrapper.appendChild(innerTable);
-        } else {
-            var wrapperDataNotification = document.createElement("div");
+        } else if (this.config.api_key === undefined) {
+            // Missing API KEY
+            //var wrapperDataNotification = document.createElement("div");
             // translations  + datanotification
-            wrapperDataNotification.innerHTML = this.translate("MISSING_API_KEY");
-
-            wrapper.appendChild(wrapperDataNotification);
+            //wrapperDataNotification.innerHTML = this.translate("MISSING_API_KEY");
+            wrapper.appendChild(this.createWrapper("MISSING_API_KEY"));
+        } else {
+            // Loading
+            wrapper.appendChild(this.createWrapper("LOADING"));
         }
         return wrapper;
+    },
+
+    createWrapper: function(textToTranslate) {
+        var wrapperDataNotification = document.createElement("div");
+        // translations  + datanotification
+        wrapperDataNotification.innerHTML = this.translate(textToTranslate);
+        return wrapperDataNotification;
     },
 
     getScripts: function () {
@@ -160,5 +155,5 @@ Module.register("uptimerobot", {
             this.processData(payload);
             this.updateDom();
         }
-    },
+    }
 });

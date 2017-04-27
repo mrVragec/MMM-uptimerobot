@@ -4,5 +4,6 @@
     "PAUSED": "Pausado",
     "NOTCHECKEDYET": "Aún no se ha seleccionado",
     "SEEMSDOWN": "Se parece abajo",
-    "MISSING_API_KEY": "Falta la API_Key en config.js!"
+    "MISSING_API_KEY": "Falta la API_Key en config.js!",
+    "LOADING": "Cargando..."
 }
