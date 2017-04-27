@@ -1,0 +1,8 @@
+{
+    "ONLINE": "Online",
+    "DOWN": "Offline",
+    "PAUSED": "Paused",
+    "NOTCHECKEDYET": "Not checked yet",
+    "SEEMSDOWN": "Seems down",
+    "MISSING_API_KEY": "Missing API_Key in config.js!"
+}

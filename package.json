@@ -1,0 +1,30 @@
+{
+    "name": "MMM-uptimerobot",
+    "version": "1.0.0",
+    "description": "MagicMirror module to monitor uptime of servers via https://uptimerobot.com",
+    "main": "uptimerobot.js",
+    "author": "Simon Crnko",
+    "license": "MIT",
+    "homepage": "https://github.com/mrVragec/MMM-uptimerobot",
+    "keywords": [
+        "uptimerobot",
+        "uptime robot",
+        "uptime",
+        "robot"
+    ],
+        "repository": {
+        "type": "git",
+        "url": "https://github.com/mrVragec/MMM-uptimerobot"
+    },
+    "devDependencies": {
+        "grunt": "latest",
+        "grunt-eslint": "latest",
+        "grunt-jsonlint": "latest",
+        "grunt-markdownlint": "^1.0.13",
+        "grunt-stylelint": "latest",
+        "grunt-yamllint": "latest",
+        "stylelint-config-standard": "latest",
+        "time-grunt": "latest"
+    },
+    "contributors": ""
+}
