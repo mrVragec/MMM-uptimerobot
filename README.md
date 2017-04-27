@@ -1,4 +1,4 @@
-# MMM-test
+# MMM-uptimerobot
 
 This is a module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/).
 
