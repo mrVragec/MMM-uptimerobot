@@ -1,4 +1,4 @@
-# MMM-test
+# MMM-test [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/mrVragec/MMM-uptimerobot/raw/master/LICENSE) [![Build Status](https://api.travis-ci.org/mrVragec/MMM-uptimerobot.svg?branch=master)](https://travis-ci.org/mrVragec/MMM-uptimerobot) [![Known Vulnerabiliries](https://snyk.io/test/github/mrvragec/mmm-uptimerobot/badge.svg)](https://snyk.io/test/github/mrvragec/mmm-uptimerobot) [![Code Climate](https://codeclimate.com/github/mrVragec/MMM-uptimerobot/badges/gpa.svg)](https://codeclimate.com/github/mrVragec/MMM-uptimerobot)
 
 This is a module for the [MagicMirror²](https://github.com/MichMich/MagicMirror/).
 
