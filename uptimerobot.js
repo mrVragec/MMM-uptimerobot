@@ -18,7 +18,7 @@ Module.register("uptimerobot", {
     requiresVersion: "2.1.0", // Required version of MagicMirror
 
     getStyles: function () {
-        return ['uptimerobot.css'];
+        return ['uptimerobot.css', 'modules/uptimerobot/css/font-awesome.css'];
     },
 
     start: function () {
@@ -53,7 +53,7 @@ Module.register("uptimerobot", {
         }
         statusObject.className += " " + status;
         if (this.config.useColors) {
-            status.className += " colored";
+            statusObject.className += " colored";
         }
     },
 
