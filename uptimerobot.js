@@ -116,6 +116,8 @@ Module.register("uptimerobot", {
         } else {
             // Loading
             wrapper.appendChild(this.createWrapper("LOADING"));
+            wrapper.className = "dimmed light small";
+
         }
         return wrapper;
     },
