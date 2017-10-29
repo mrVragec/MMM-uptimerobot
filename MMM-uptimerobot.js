@@ -5,7 +5,7 @@
  * MIT Licensed.
  */
 
-Module.register("uptimerobot", {
+Module.register("MMM-uptimerobot", {
   defaults: {
     updateInterval: 60000,
     retryDelay: 5000,
@@ -81,7 +81,7 @@ Module.register("uptimerobot", {
     } else {
       statusObject.className = statusClass;
     }
-    
+
     statusObject.className += " " + status;
 
     if (this.config.useColors) {
