@@ -5,7 +5,7 @@
  * MIT Licensed.
  */
 
-Module.register("MMM-uptimerobot", {
+Module.register("uptimerobot", {
   defaults: {
     updateInterval: 60000,
     retryDelay: 5000,
@@ -33,7 +33,7 @@ Module.register("MMM-uptimerobot", {
   },
 
   getStyles: function () {
-    return ['MMM-uptimerobot.css', 'modules/MMM-uptimerobot/css/font-awesome.css'];
+    return ['uptimerobot.css', 'modules/uptimerobot/css/font-awesome.css'];
   },
 
   getData: function () {
