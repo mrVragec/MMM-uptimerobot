@@ -1,0 +1,9 @@
+{
+    "ONLINE": "En ligne",
+    "DOWN": "Hors ligne",
+    "PAUSED": "En pause",
+    "NOTCHECKEDYET": "Pas encore vérifié",
+    "SEEMSDOWN": "Semble hors ligne",
+    "MISSING_API_KEY": "API_KEY manquante dans config.js!",
+    "LOADING": "Chargement..."
+}

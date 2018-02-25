@@ -55,7 +55,9 @@ Module.register("MMM-uptimerobot", {
     //FIXME: This can be load a one file javascript definition
     return {
       en: "translations/en.json",
-      es: "translations/es.json"
+      es: "translations/es.json",
+      de: "translations/de.json",
+      fr: "translations/fr.json"
     };
   },
 
