@@ -1,5 +1,5 @@
 /* Magic Mirror
- * Module: MMM-uptimerobot
+ * Module: uptimerobot
  *
  * By Simon Crnko
  * MIT Licensed.
